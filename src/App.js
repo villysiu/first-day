@@ -4,6 +4,8 @@ import Name from "./components/Name"
 import Grade from "./components/Grade"
 import Age from "./components/Age"
 import Favorite from "./components/Favorite"
+import Calendar from "./components/Calendar"
+import Teacher from "./components/Teacher"
 function App() {
   return (
     <div className="App">
@@ -12,13 +14,13 @@ function App() {
       <div className="row">
         <div className="col-50">
          
-            <Age /> 
+          <Age /> 
            
           <Favorite />
         </div>
         <div className="col-50">
-          <div className="row-30">today </div>
-          <div className="row-30">teacher </div>
+          <Calendar />
+          <Teacher />
           <div className="row-30">When I grow up </div>
         </div>
       </div>

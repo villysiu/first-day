@@ -32,13 +32,16 @@ const Grade = () =>{
     }
     return (
         
-        <div className="grade kalam-regular">
-            <div>First Day of</div>
+        <div className="grade itim-regular">
+            
+            <div className="grade-text-wrapper">
+                First Day of
             { inputbox ? 
                 <GradeDropdown />
                 :
-                <div className="grade-text nerko-one-regular multicolor-text" onClick={handleClick} >{grade}</div>
+                <div className="grade-text anton-regular multicolor-text" onClick={handleClick} >{grade}</div>
             }
+            </div>
 
         </div>
     )

@@ -1,11 +1,11 @@
 :root {
-  --calendar-width: 25vw;
+  --calendar-height: 15vh;
   --col-width: 50vw;
   --name-height: 14vh;
   --grade-height: 24vh;
   --age-height: 25vh;
   --favorite-height: 37vh;
-  --font-size: 6vw;
+  /* --font-size: 6vw; */
   
 }
 .App {
@@ -17,7 +17,7 @@
   font-family: "Itim", cursive;
   font-weight: 400;
   font-style: normal;
-  font-size: var(--font-size);
+  /* font-size: var(--font-size); */
 }
 .row {
   display: flex;
@@ -131,6 +131,7 @@
 .favorite {
   /* margin-top: 5rem;; */
   height: var(--favorite-height);
+  font-size: calc(var(--favorite-height) / 9);
 }
 .fav-wrapper{
   height: calc(var(--favorite-height) * 0.75);
@@ -147,51 +148,53 @@
 }
 .fav-li {
   margin-bottom: calc(var(--favorite-height) * -0.05);
-  
-  
 }
 .fav-input_wrapper{
   display: flex;
   flex-direction: column;
-  padding-top: calc(var(--font-size) * 0.9);
-  margin-left: var(--font-size);
+  align-items: center;
+  padding-top: calc(var(--favorite-height) * 0.15);
+  
   
 
 }
 .fav-input{
-  font-size: calc(var(--font-size) / 2);
-  width: calc(var(--font-size) * 2.75);
-    margin: calc(var(--font-size) / 16);
+  font-size: calc(var(--favorite-height) * 0.07);
+  width: calc(var(--favorite-height) * 0.4);
+  margin-bottom: calc(var(--favorite-height) * 0.01);
 }
 /* Date */
-#date { 
-  width: var(--calendar-width);
-  height: var(--calendar-width);
+.date { 
+  width: var(--calendar-height);
+  height: var(--calendar-height);
   background-image: url("./images/calendar2.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  position: relative;
+  /* position: relative; */
 
-  
 }
-#date-text {
+.date-input {
+  margin-top: calc(var(--calendar-height) / 2);
+  font-size: calc(var(--calendar-height) / 12);
+}
+.date-text {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 .date-m {
-  margin-top: calc(var(--calendar-width) / 6);
-  font-size: calc(var(--calendar-width) / 5);
+  margin-top: calc(var(--calendar-height) / 6);
+  font-size: calc(var(--calendar-height) / 5);
   color: white;
 }
 .date-d {
 
-  font-size: calc(var(--calendar-width) / 3);
+  font-size: calc(var(--calendar-height) / 3);
 }
 .date-y {
 
-  font-size: calc(var(--calendar-width) / 6);
+  font-size: calc(var(--calendar-height) / 6);
 }
 .teacher {
   display: flex;

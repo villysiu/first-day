@@ -44,13 +44,15 @@ const Calendar = () =>{
         
         return (
 
-            <div id="date" className="roboto-medium" >
+            <div className="date roboto-medium" >
                 {
                     calendar ? 
 
-                    <input type="date" id="cal" ref={ref} onChange={handleChange} />
+                    <input type="date" className="date-input" ref={ref} onChange={handleChange} 
+                        defaultValue={`${year}-${(month+1)<10? "0" + (month+1) : (month+1) }-${(date)<10? "0" + (date) : (date) }`}
+                    />
                     :
-                    <div id="date-text"  onClick={handleClick}>
+                    <div className="date-text"  onClick={handleClick}>
                         <div className="date-m">{months[month]}</div>
                         <div className="date-d">{date}</div>
                         <div className="date-y">{year}</div>

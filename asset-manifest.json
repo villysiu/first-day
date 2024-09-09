@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/first-day/static/css/main.e5f60a00.css",
-    "main.js": "/first-day/static/js/main.d87f6ed7.js",
+    "main.css": "/first-day/static/css/main.b46ce481.css",
+    "main.js": "/first-day/static/js/main.b1ff5f23.js",
     "static/js/453.00cbc5f8.chunk.js": "/first-day/static/js/453.00cbc5f8.chunk.js",
     "static/media/blackboard.png": "/first-day/static/media/blackboard.d376a9907ca145d3fb03.png",
     "static/media/apple.png": "/first-day/static/media/apple.daf52773275fa1443726.png",
@@ -9,12 +9,12 @@
     "static/media/file.png": "/first-day/static/media/file.ab70c02238c6785e426f.png",
     "static/media/logo.svg": "/first-day/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/first-day/index.html",
-    "main.e5f60a00.css.map": "/first-day/static/css/main.e5f60a00.css.map",
-    "main.d87f6ed7.js.map": "/first-day/static/js/main.d87f6ed7.js.map",
+    "main.b46ce481.css.map": "/first-day/static/css/main.b46ce481.css.map",
+    "main.b1ff5f23.js.map": "/first-day/static/js/main.b1ff5f23.js.map",
     "453.00cbc5f8.chunk.js.map": "/first-day/static/js/453.00cbc5f8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e5f60a00.css",
-    "static/js/main.d87f6ed7.js"
+    "static/css/main.b46ce481.css",
+    "static/js/main.b1ff5f23.js"
   ]
 }

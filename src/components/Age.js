@@ -9,10 +9,9 @@ const Age = () =>{
         setInputbox(true)
     }
     const handleKeyPressed = e => {
-        
         if(e.key==="Enter"){
-
-            setAge(e.target.value)
+            if(e.target.value)
+                setAge(e.target.value)
             setInputbox(false)
         }
     }
@@ -32,14 +31,14 @@ const Age = () =>{
             { inputbox ? 
                 
                     <input ref={ageRef} type="number" className="age-input" maxLength="2" 
-                    onKeyPress={handleKeyPressed} />
-                // </div>
+                    onKeyPress={handleKeyPressed} 
+                    defaultValue={age} />
+                
                 :
-                // <div className="age-text-wrapper">
+                
                     <div className="age-text" onClick={handleClick} >
                         {age}
                     </div>
-                // </div>
             }
             </div>
             

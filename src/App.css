@@ -16,7 +16,7 @@
   --career-height: 25vh;
   --crayon-height: 10vh;
 }
-@media screen and (min-width: 1366.25px) {
+@media screen and (min-width: 1024.25px ) {
   :root{
     
     --grade-width: 64rem;
@@ -24,7 +24,7 @@
   }
   
 }
-@media screen and (min-height: 1024.25px) {
+@media screen and (min-height: 1366.25px) {
   :root{
     --grade-height: calc(85rem / 4);
 
@@ -32,12 +32,16 @@
   
 }
 .App {
-  display: flex;
+  /* width: 1024px;
+  height: 1366px; */
+  width: 100vw;
+  height: 100vh;
+  
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
   background-color: beige;
-  height: 1366px;
-  width: 1024px;
+  
   margin-left: auto;
   margin-right: auto;
   font-family: "Itim", cursive;

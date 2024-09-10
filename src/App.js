@@ -11,7 +11,7 @@ import Crayon from "./components/Crayon"
 function App() {
   return (
     <div className="App">
-      <Name />
+      {/* <Name /> */}
       <Grade />
       {/* <div className="row">
         <div className="col-50">

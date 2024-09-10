@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Name />
       <Grade />
-      <div className="row">
+      {/* <div className="row">
         <div className="col-50">
          
           <Age /> 
@@ -27,7 +27,7 @@ function App() {
           <Career />
           
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

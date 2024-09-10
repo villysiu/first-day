@@ -1,8 +1,14 @@
+/*  Based on ipad pro as default 
+    height: 100vh;  1024px 64rem
+    width: 100vw;  1366px 85.375rem */
+
 :root {
+
   --calendar-height: 15vh;
   --col-width: 50vw;
   --name-height: 14vh;
-  --grade-height: 24vh;
+  --name-width: 100vw;
+  --grade-height: 25vh; 
   --grade-width: 100vw;
   --age-height: 25vh;
   --favorite-height: 37vh;
@@ -10,23 +16,35 @@
   --career-height: 25vh;
   --crayon-height: 10vh;
 }
-@media screen and (min-width: 844px) {
+@media screen and (min-width: 1366.25px) {
   :root{
-    --grade-height: 252px;
-  /* --grade-width: 100vw; */
+    
+    --grade-width: 64rem;
+    /* --name-width: 1536px; */
+  }
+  
+}
+@media screen and (min-height: 1024.25px) {
+  :root{
+    --grade-height: calc(85rem / 4);
+
   }
   
 }
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: beige;
-  height: 100%;
-  /* color: white; */
-  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  height: 1366px;
+  width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
   font-family: "Itim", cursive;
   font-weight: 400;
   font-style: normal;
-  /* font-size: var(--font-size); */
+  border: gray solid 1px;
+ 
 }
 .row {
   display: flex;
@@ -45,11 +63,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: calc(--var(--name-height) / 8);
+    margin-bottom: calc(var(--name-height) / 8);
+    width: var(--name-width);
     height: var(--name-height);
+
 }
 .name-text {
-  font-size: 16vw;
+  font-size: calc(var(--name-height));
   font-weight: bolder;
   color: rgb(158, 65, 156);
 }
@@ -60,7 +80,7 @@
 }
 /* GRADE */
 .grade {
-  
+  width: var(--grade-width);
   height: var(--grade-height);
   background-image: url("./images/blackboard.png");
   background-repeat: no-repeat;

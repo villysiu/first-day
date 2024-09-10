@@ -36,7 +36,7 @@ const Grade = () =>{
             
             <div className="grade-text-wrapper">
                 First Day of
-            { inputbox ? 
+            { inputbox === true ? 
                 <GradeDropdown />
                 :
                 <div className="grade-text anton-regular multicolor-text" onClick={handleClick} >{grade}</div>

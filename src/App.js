@@ -6,6 +6,8 @@ import Age from "./components/Age"
 import Favorite from "./components/Favorite"
 import Calendar from "./components/Calendar"
 import Teacher from "./components/Teacher"
+import Career from "./components/Career"
+import Crayon from "./components/Crayon"
 function App() {
   return (
     <div className="App">
@@ -17,11 +19,13 @@ function App() {
           <Age /> 
            
           <Favorite />
+          <Crayon />
         </div>
         <div className="col-50">
           <Calendar />
           <Teacher />
-          <div className="row-30">When I grow up </div>
+          <Career />
+          
         </div>
       </div>
     </div>

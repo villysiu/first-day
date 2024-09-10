@@ -3,7 +3,8 @@
     width: 100vw;  1366px 85.375rem */
 
 :root {
-
+  --ipad-pro-width: 1024px;
+  --ipad-pro-height: 1366px;
   --calendar-height: 15vh;
   --col-width: 50vw;
   --name-height: 14vh;
@@ -15,41 +16,42 @@
   --teacher-height: 25vh;
   --career-height: 25vh;
   --crayon-height: 10vh;
+
+  --name-margin-bottom: -18px;
 }
 @media screen and (min-width: 1024.25px ) {
   :root{
     
-    --grade-width: 64rem;
-    /* --name-width: 1536px; */
+    --grade-width: var(--ipad-pro-width);
+    
+    --name-width: var(--ipad-pro-width);
   }
   
 }
+
 @media screen and (min-height: 1366.25px) {
   :root{
-    --grade-height: calc(85rem / 4);
-
+    --grade-height: calc(var(--ipad-pro-height) / 4);
   }
   
 }
 .App {
-  /* width: 1024px;
-  height: 1366px; */
-  width: 100vw;
-  height: 100vh;
-  
   /* display: flex;
   flex-direction: column;
   align-items: center; */
   background-color: beige;
   
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
   font-family: "Itim", cursive;
   font-weight: 400;
   font-style: normal;
-  border: gray solid 1px;
+  /* text-align: center; */
+  
  
 }
+
+
 .row {
   display: flex;
   flex-direction: row;
@@ -67,14 +69,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: calc(var(--name-height) / 8);
+    margin-bottom: calc(var(--name-width) / var(--name-margin-bottom-divide));
     width: var(--name-width);
-    height: var(--name-height);
-
-}
+    height: calc(var(--name-width) * 0.2)
+} 
 .name-text {
-  font-size: calc(var(--name-height));
-  font-weight: bolder;
+  font-size: calc(var(--name-width) / 6);
   color: rgb(158, 65, 156);
 }
 .name-input {

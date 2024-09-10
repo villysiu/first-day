@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import Name from "./components/Name"
-import Grade from "./components/Grade"
+import SupportDevices from "./components/SupportDevices"
+
 import Age from "./components/Age"
 import Favorite from "./components/Favorite"
 import Calendar from "./components/Calendar"
@@ -11,8 +11,10 @@ import Crayon from "./components/Crayon"
 function App() {
   return (
     <div className="App">
-      {/* <Name /> */}
-      <Grade />
+      {/* <div className="app_wrapper"> */}
+        <SupportDevices />
+      
+      {/* <FirstDay /> */}
       {/* <div className="row">
         <div className="col-50">
          
@@ -28,6 +30,7 @@ function App() {
           
         </div>
       </div> */}
+      {/* </div> */}
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 
-const Crayon = () =>{
+const Crayon = ({setFavColor}) =>{
     const [inputbox, setInputbox ]  = useState(false)
     const [crayon, setCrayon] = useState(0)
     let colors = ["RED", "ORANGE", "YELLOW", "GREEN", "BLUE", "PURPLE"]
@@ -9,17 +9,12 @@ const Crayon = () =>{
     const handleClick = () =>{
         setInputbox(!inputbox)
     }
-    const handleKeyPressed = e => {
-        
-        if(e.key==="Enter"){
-            if(e.target.value)
-                setCrayon(e.target.value)
-            setInputbox(!inputbox)
-        }
-    }
+
     const handleChange = e => {
-        if(e.target.value)
+        if(e.target.value){
             setCrayon( e.target.value )
+            setFavColor(colors[e.target.value])
+        }
         setInputbox(!inputbox)
     }
 

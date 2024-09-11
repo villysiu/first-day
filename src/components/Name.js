@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 
-const Name = () =>{
+const Name = ({favColor}) =>{
     const [inputbox, setInputbox ]  = useState(false)
     const [name, setName] = useState("Danielle")
     const ref = useRef();
-
+    console.log(favColor)
     const handleClick = () =>{
         setInputbox(!inputbox)
     }
@@ -24,7 +24,7 @@ const Name = () =>{
         }
         document.addEventListener("mousedown", clickOutside);
         return () => {
-        document.removeEventListener("mousedown", clickOutside);
+            document.removeEventListener("mousedown", clickOutside);
         };
     }, [])
     if(inputbox){
@@ -37,8 +37,8 @@ const Name = () =>{
     }
     
     return (
-        <div className="name lilita-one-regular">
-            <div className="name-text dm-serif-text-regular" onClick={handleClick} >
+        <div className="name  lilita-one-regular">
+            <div style={{'color': favColor}} className="name-text dm-serif-text-regular" onClick={handleClick} >
                 {name}'s
             </div>
 

@@ -310,26 +310,25 @@
   width: var(--row1-col-width);
   height: var(--row1-col-width);
 
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
-
   color: white;
   font-size: calc(var(--row1-col-width) / 8);
   font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+
 }
 .crayon-bg {
-  width: calc(var(--row1-col-width) );
+  width: calc(var(--row1-col-width) * 0.9 );
   height: calc(var(--row1-col-width) /4);
   
   
   background-repeat: no-repeat;
-  background-size: contain;
-  background-size: calc(var(--row1-col-width) ) calc(var(--row1-col-width) /4);
+  /* background-size: contain; */
+  background-size: calc(var(--row1-col-width) * 0.9) calc(var(--row1-col-width) /4);
   background-position: center;
+  transform: rotate(-45deg);
   
 
 }
@@ -355,8 +354,8 @@
 }
 .crayon-text{
   height: calc(var(--row1-col-width) /4);
-  width: calc(var(--row1-col-width) /3 * 2);
-  padding-left: calc(var(--row1-col-width) /4);
+  width: calc(var(--row1-col-width) * 0.75);
+  padding-left: calc(var(--row1-col-width) * 0.15);
   display: flex;
   justify-content: center;
   align-items: center;

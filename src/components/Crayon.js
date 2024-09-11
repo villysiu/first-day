@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 
 const Crayon = () =>{
     const [inputbox, setInputbox ]  = useState(false)
-    const [crayon, setCrayon] = useState(1)
+    const [crayon, setCrayon] = useState(0)
     let colors = ["RED", "ORANGE", "YELLOW", "GREEN", "BLUE", "PURPLE"]
     const ref = useRef();
 
@@ -43,7 +43,7 @@ const Crayon = () =>{
                 {
                     colors.map((color, idx)=>{
                         return (
-                            <option className="opy" key={idx} value={idx}>{color}</option>
+                            <option className="crayon-color" key={idx} value={idx}>{color}</option>
                         )
                     })
                 }
@@ -52,13 +52,13 @@ const Crayon = () =>{
     }
     
     return (
-        <div className={"crayon " + colors[crayon].toLowerCase()}>
-        {/* <div className="crayon "> */}
-           
-            
+        <div className="crayon "> 
+            {/* <div className="crayon orange"> */}
+            <div className={"crayon-bg " + colors[crayon].toLowerCase()}>
+                
                 {
                     inputbox ?
-                        <div className="crayon-input-wrapper">
+                        <div className="crayon-text">
                             <ColorDropdown />
                         </div>
                         :
@@ -66,7 +66,7 @@ const Crayon = () =>{
             
                 }
                 
-     
+             </div>   
 
         </div>
     )

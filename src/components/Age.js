@@ -26,8 +26,7 @@ const Age = () =>{
     
     return (
         <div className="age">
-            I am 
-            <div  className="age-wrapper">
+            
             { inputbox ? 
                 
                     <input ref={ageRef} type="number" className="age-input" maxLength="2" 
@@ -40,9 +39,6 @@ const Age = () =>{
                         {age}
                     </div>
             }
-            </div>
-            
-            Years Old
         </div>
     )
 }

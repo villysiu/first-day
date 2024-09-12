@@ -25,7 +25,7 @@ function App() {
         </div>
         <div className="col-50">
           
-          <Teacher />
+          
           <Career />
           
         </div>

@@ -33,7 +33,8 @@ const Career = () =>{
     return (
         <div className="career ">
             <div className="career-wrapper"  >
-            I want to be a
+                
+          I want to be a 
                 {
                     inputbox ?
                         <div className="career-input-wrapper">
@@ -45,7 +46,7 @@ const Career = () =>{
             
                 }
                 
-            when i grow up.
+            when i grow up. 
             </div>
         </div>
     )

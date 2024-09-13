@@ -21,6 +21,7 @@ const Teacher = () =>{
     }
     const handleChange = e => {
         setTitle( e.target.value )
+        setInputbox(false)
     }
     useEffect(()=>{
         const clickOutside = e => {
@@ -50,22 +51,26 @@ const Teacher = () =>{
     
     return (
                 <div className={title==="Mr" ? "teacher m" : "teacher f"} >
-                    {
+                    
+                    <div className={title==="Mr" ? "teacher-text m" : "teacher-text f"} >
+                        {
                         inputbox ?
 
-                        <div ref={teacherRef} className="teacher-dd-wrapper">
+                        <div ref={teacherRef} className="teacher-input-wrapper">
                             <TitleDropdown />
                             <input ref={teacherRef} type="text" className="teacher-input-box" maxLength="15" 
                             onKeyPress={handleKeyPressed}
                             defaultValue={teacher} />
                         </div>
                         :
-                        <div className="teacher-text" onClick={handleClick}>
+                        <div onClick={handleClick}>
                             <span>{title}.</span>
                             {" "}
                             <span >{teacher}</span>
-                        </div>
-                    }
+                            </div>
+                        }
+                    </div>
+                    
                     
                 </div>
             

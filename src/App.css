@@ -21,6 +21,7 @@
 
   --row1-width: 100vw;
   --row1-col-width: 33vw;
+  --row-col2-width: 50vw;
 }
 @media screen and (min-width: 1024.25px ) {
   :root{
@@ -30,6 +31,7 @@
     --name-width: var(--ipad-pro-width);
     --row1-width: var(--ipad-pro-width);
     --row1-col-width: calc(var(--ipad-pro-width) / 3);
+    --row-col2-width: calc(var(--ipad-pro-width) / 2);
   }
   
 }
@@ -233,76 +235,107 @@
 
 .teacher {
   display: flex;
-  justify-content: center;
-  height: calc(var(--teacher-height) );
-  width: 50vw;
-  font-size: calc(var(--teacher-height) /6);
+  /* justify-content: center; */
+  height: var(--row-col2-width);
+  width: var(--row-col2-width);
+  font-size: calc(var(--row-col2-width) /8);
   color: white;
-  border: 0.75px;
   
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 .teacher.m{
   background-image: url("./images/teacher_m.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
 }
 .teacher.f {
   background-image: url("./images/teacher_f.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  
 }
 .teacher-text {
-  padding-top: 5vh;
-  /* margin-left: -10vw; */
+  /* border: 1px solid black; */
 
 }
-.teacher-dd-wrapper {
-  padding-top: 3vh;
+.teacher-text.m{
+  margin-top: calc(var(--row1-col-width) * 0.15);
+  margin-left: calc(var(--row1-col-width) * 0.5);
+  
+  width: calc(var(--row1-col-width) * 0.95);
+  height: calc(var(--row1-col-width) * 0.7);
+}
+.teacher-text.f {
+  margin-top: calc(var(--row1-col-width) * 0.06);
+  margin-left: calc(var(--row1-col-width) * 0.1);
+  
+  width: calc(var(--row1-col-width) * 0.8);
+  height: calc(var(--row1-col-width) * 0.7);
+}
+.teacher-input-wrapper {
+   /* /display: flex; */
+  height: calc(var(--row-col2-width) * 0.3);
+  /* width: 100%; */
+  
+
 }
 .title-dropdown{
-  font-size: calc(var(--teacher-height) / 12);
-  height: calc(var(--teacher-height) / 8 + 5.5px);
+  font-size: calc(var(--row-col2-width) * 0.08);
+  height: calc(var(--row-col2-width) * 0.15);
 
 }
 .teacher-input-box {
-  width: 16vw;
-  font-size: calc(var(--teacher-height) / 12);
-  height: calc(var(--teacher-height) / 8);
+  width: calc(var(--row-col2-width) * 0.6);
+  font-size: calc(var(--row-col2-width) * 0.08);
+  height: calc(var(--row-col2-width) * 0.14);
+
 }
 .career {
-  height: var(--career-height);
-  width: 50vw;
+  height: var(--row-col2-width);
+  width: var(--row-col2-width);
   background-image: url("./images/career.png");
   background-repeat: no-repeat;
-  background-size: 80% 100%;
+  background-size: contain;
   background-position: center;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+    justify-content: center; */
+    font-size: calc(var(--row-col2-width)/ 12);
+}
+.career-wrapper {
+  /* border: 1px solid black; */
+  margin-top: calc(var(--row-col2-width) * 0.32);
+  margin-left: calc(var(--row-col2-width) * 0.22);
+  width: calc(var(--row-col2-width) * 0.6);
+  height: calc(var(--row-col2-width) * 0.5);
+
   display: flex;
   flex-direction: column;
   align-items: center;
     justify-content: center;
-    font-size: calc(var(--career-height) / 8);
-}
-.career-wrapper {
-  padding-top: calc(var(--career-height) / 6);
 }
 .career-text {
-  font-size: calc(var(--career-height) / 5);
+  font-size: calc(var(--career-height) / 10);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold ;
-  height: calc(var(--career-height) / 4);
+  height: calc(var(--row-col2-width) * 0.5 * 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    justify-content: center;
 }
 .career-input-wrapper{
-  height: calc(var(--career-height) / 4);
+  width: calc(var(--row-col2-width) * 0.55);
+  height: calc(var(--row-col2-width) * 0.25);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .career-input {
-  font-size: calc(var(--career-height) / 8);
-  width: 25vw;
+  font-size: calc(var(--row-col2-width) * 0.1);
+  width: calc(var(--row-col2-width) * 0.5);
+
+  height: calc(var(--row-col2-width) * 0.1);
+  
   
   /* margin-top: 1.3vh; */
 }
@@ -366,7 +399,7 @@
 }
 .color-dropdown {
   width: calc(var(--row1-col-width) * 0.75);
-  height: calc(var(--row1-col-width) * 0.25);
+  height: calc(var(--row1-col-width) * 0.2);
   font-size: calc(var(--row1-col-width) / 10);
   
 }

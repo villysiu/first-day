@@ -33,7 +33,7 @@ const Crayon = ({setFavColor}) =>{
 
     const ColorDropdown = () =>{
         return (
-            <select name="colors" className="color-dropdown" onChange={handleChange} defaultValue={crayon}>
+            <select ref={ref} name="colors" className="color-dropdown" onChange={handleChange} defaultValue={crayon}>
                 {/* <option key="x">Select your grade</option> */}
                 {
                     colors.map((color, idx)=>{

@@ -7,17 +7,6 @@
   --ipad-pro-height: 1366px;
   
   --col-width: 50vw;
-  --name-height: 14vh;
-  --name-width: 100vw;
-  --grade-height: 25vh; 
-  --grade-width: 100vw;
-
-  /* --age-width: 30vw; */
-  --calendar-width: 30vh;
-  --favorite-height: 37vh;
-  --teacher-height: 25vh;
-  --career-height: 25vh;
-  --crayon-height: 5vh;
 
   --row1-width: 100vw;
   --row1-col-width: 33vw;
@@ -314,7 +303,7 @@
     justify-content: center;
 }
 .career-text {
-  font-size: calc(var(--career-height) / 10);
+  font-size: calc(var(--row-col2-width) / 7);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold ;
   height: calc(var(--row-col2-width) * 0.5 * 0.5);

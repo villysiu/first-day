@@ -31,10 +31,10 @@ const Favorite = () =>{
     },[])
     return (
         <div className="favorite itim-regular">
-            💗 I Love 💗
+            <div className="fav-wrapper">💗 I Love 💗</div>
             
 
-            <div className="fav-wrapper">
+            {/* <div className="fav-wrapper"> */}
             { inputbox ? 
                 <div ref={favRef} className="fav-input_wrapper">
                 {
@@ -63,7 +63,7 @@ const Favorite = () =>{
                     </div>
                 
             }
-            </div>
+            
         </div>
     )
 }

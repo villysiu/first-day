@@ -7,6 +7,7 @@ import Calendar from "./Calendar"
 import Crayon from "./Crayon"
 import Teacher from "./Teacher"
 import Career from "./Career"
+import Favorite from './Favorite'
 const FirstDay = () =>{
     const [favColor, setFavColor] = useState("red")
     return (
@@ -16,10 +17,11 @@ const FirstDay = () =>{
             <div className="row1">
                 <Age />
                 <Calendar />
-                <div>
+                {/* <div className="row2"> */}
                 <Crayon setFavColor={setFavColor} />
                 
-                </div>
+                {/* </div> */}
+                <Favorite />
             </div>
             <div className="row1">
                 <Career />

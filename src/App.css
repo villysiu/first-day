@@ -5,61 +5,37 @@
 :root {
   --ipad-pro-width: 1024px;
   --ipad-pro-height: 1366px;
-  
-  /* --col-width: 50vw; */
-
   --row1-width: 100vw;
-  
-  /* --row-col2-width: 50vw; */
 
-  --crayon-bg-w: calc(33vw / 3);
-  --caryon-bg-h: calc(100vw / 4);
 }
 @media screen and (min-width: 1024.25px ) {
   :root{
-    
-
     --row1-width: var(--ipad-pro-width);
-    
-    /* --row-col2-width: calc(var(--ipad-pro-width) / 2); */
   }
   
 }
 
-@media screen and (min-height: 1366.25px) {
-  :root{
-    /* --grade-height: calc(var(--ipad-pro-height) / 4); */
-  }
-  
-}
+
 .App {
   
-  background-color: beige;
+  background-color: black;
   font-family: "Itim", cursive;
   font-weight: 400;
   font-style: normal;
+  border: black solid 1px;
+  width: var(--ipad-pro-width);
+  height: var(--ipad-pro-height);
+  color: white;
 }
 
 
 .row1 {
   display: flex;
   flex-direction: row;
-
   width: var(--row1-width);
+  height: calc(var(--row1-width) / 3);
 }
-/* .row2 {
-  width: var(--row1-col-width);
-  height: var(--row1-col-width);
-} */
-.col-33 {
- width: calc(var(--row1-width) / 3) !important;
-}
-.col-50 {
-  width: var(--col-width);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 
 /* NAME */
 .name {
@@ -117,12 +93,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(var(--row1-width) / 3);
+  /* height: calc(var(--row1-width) / 3); */
   width: calc(var(--row1-width) * 0.3);
   font-size: calc(var(--row1-width) / 6);
   background-image: url("./images/apple.png");
   background-repeat: no-repeat;
-  background-size: calc(var(--row1-width) * 0.25) calc(var(--row1-width) * 0.25);
+  background-size: calc(var(--row1-width) * 0.25);
   background-position: center;
 }
 
@@ -150,13 +126,13 @@
 .favorite {
   --fav-height: calc(var(--row1-width) / 3);
   width: calc(var(--row1-width) * 0.3);
-  height: calc(var(--row1-width) / 3);
+  /* height: calc(var(--row1-width) / 3); */
   font-size: calc(var(--row1-width) * 0.04);
   background-image: url("./images/file.png");
   background-repeat: no-repeat;
   background-size:  contain;
   background-position: center;
-  /* padding-top: calc(var(--row1-width) * 0.05); */
+  color: black;
 
   display: flex;
   flex-direction: column;
@@ -178,9 +154,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* padding-top: calc(var(--favorite-height) * 0.15); */
-  
-  
 
 }
 .fav-input{
@@ -190,14 +163,16 @@
 }
 /* Date */
 .date { 
-  height: calc(var(--row1-width) / 3);
-  width: calc(var(--row1-width) *0.3);
+  --date-width: calc(var(--row1-width) * 0.3);
+  
+  width: var(--date-width);
   background-image: url("./images/calendar2.png");
   background-repeat: no-repeat;
-  background-size: calc(var(--row1-width) / 3 * 0.8);
+  background-size: contain;
   background-position: center;
   display: flex;
   flex-direction: column;
+  color: black;
 }
 .date-input {
   height: calc(var(--row1-width) / 15);
@@ -245,7 +220,7 @@
   background-image: url("./images/teacher_f.png");
 }
 .teacher-text {
-  border: 1px solid black;
+  /* border: 1px solid black; */
 
 }
 .teacher-text.m{
@@ -328,35 +303,26 @@
 
 } 
 .crayon {
-  --crayon-bg-width: calc(var(--row1-width) * 0.08);
-  --crayon-bg-height: calc(var(--row1-width) * 0.3);
-  width: calc(var(--row1-width) * 0.1);
-  height: calc(var(--row1-width) / 3);
-
+  --crayon-bg-width: calc(var(--row1-width) * 0.1);
+  width: var(--crayon-bg-width);
   color: white;
-  font-size: calc(var(--row1-width) / 3 / 8);
   font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  /* border: 1px solid black; */
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
 
 }
 .crayon-bg {
   
   width: var(--crayon-bg-width);
-  height: var(--crayon-bg-height);
-
-  
+  height: 100%;
   background-repeat: no-repeat;
-  background-size: var(--crayon-bg-width) var(--crayon-bg-height);
-  background-position: left;
+  background-size: 90% 80% ;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .red {
   background-image: url("./images/crayon-red.png");
-  /* transform: rotate (-45deg); */
-  
 }
 .orange {
   background-image: url("./images/crayon-orange.png");
@@ -374,11 +340,13 @@
   background-image: url("./images/crayon-purple.png");
 }
 .crayon-text{
-  width: calc( var(--crayon-bg-height) * 0.5);
-  height: var(--crayon-bg-width);
-  margin-top: calc(var(--crayon-bg-width) * 1.35);
-  margin-left: calc(var(--crayon-bg-width) * -0.6); 
+  margin-top: calc(var(--crayon-bg-width) / 3);
   transform: rotate(90deg);
+
+  width: calc(var(--crayon-bg-width) * 3);
+  height: calc(var(--crayon-bg-width) / 2);
+  font-size: calc(var(--crayon-bg-width) * 0.4);
+  
 }
 .crayon-color {
   font-size: 200px;

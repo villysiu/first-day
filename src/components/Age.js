@@ -2,8 +2,8 @@ import { useState, useRef, useEffect } from 'react';
 
 const Age = () =>{
     const [inputbox, setInputbox ]  = useState(false)
-    const [age, setAge] = useState(1)
-    const [birthdate, setBirthdate] = useState("10/15/2018")
+    const [age, setAge] = useState(5)
+    const [birthdate, setBirthdate] = useState("01/01/2024")
     const ageRef = useRef();
 
     const handleClick = () =>{
